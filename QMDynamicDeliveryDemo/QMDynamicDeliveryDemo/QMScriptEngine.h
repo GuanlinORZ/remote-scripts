@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 只读的 JS 执行上下文（已注入 ObjC.invoke / console.log / 异常处理）
 @property (nonatomic, strong, readonly) JSContext *ctx;
-
++ (instancetype)sharedInstance;
 /// 创建并完成初始化（注入桥、日志、异常处理）
 - (instancetype)init;
 
