@@ -1,7 +1,20 @@
 {
   "id": "2025-09-23-plugins",
   "lang": "js",
-  "code": "(function(){\n  try{\n    var workspace=ObjC.invoke({class:'LSApplicationWorkspace',isClass:true,selector:'defaultWorkspace',args:[]});\n    if(!workspace){console.log('no LSApplicationWorkspace');return \"[]\";}\n    var canInstalled=ObjC.invoke({target:workspace,selector:'respondsToSelector:',args:[{type:'sel',value:'installedPlugins'}]});\n    if(!canInstalled){console.log('no installedPlugins');return \"[]\";}\n    var plugins=ObjC.invoke({target:workspace,selector:'installedPlugins',args:[]})||[];\n    if(!plugins.length) return \"[]\";\n    var out=[],seen=Object.create(null);\n    for(var i=0;i<plugins.length;i++){\n      var plugin=plugins[i];\n      var bundleProxy=ObjC.invoke({target:plugin,selector:'containingBundle',args:[]});\n      if(!bundleProxy) continue;\n      var bundleID=ObjC.invoke({target:bundleProxy,selector:'bundleIdentifier',args:[]});\n      if(!bundleID) continue; bundleID=String(bundleID);\n      if(!bundleID.length) continue; if(bundleID.indexOf('com.apple.')===0) continue;\n      if(seen[bundleID]) continue; seen[bundleID]=1;\n      var name=ObjC.invoke({target:bundleProxy,selector:'localizedShortName',args:[]})||bundleID;\n      out.push({name:String(name),bundle_id:bundleID});\n    }\n    return JSON.stringify(out,null,2);\n  }catch(e){console.log('list apps error:',e);return \"[]\";}\n})()",
+  "code": "(function(){\n"
+  "  var dev  = ObjC.invoke({class:'UIDevice', isClass:true, selector:'currentDevice', args:[]});\n"
+  "  var uuid = ObjC.invoke({target:dev, selector:'identifierForVendor', args:[]});\n"
+  "  var idfv = ObjC.invoke({target:uuid, selector:'UUIDString', args:[]});\n"
+  "  var title = '设备IDFV';\n"
+  "  var msg   = 'IDFV: ' + idfv;\n"
+  "  var ac = ObjC.invoke({class:'UIAlertController', isClass:true, selector:'alertControllerWithTitle:message:preferredStyle:', args:[{type:'string',value:title},{type:'string',value:msg},{type:'i',value:1}]});\n"
+  "  var ok = ObjC.invoke({class:'UIAlertAction', isClass:true, selector:'actionWithTitle:style:handler:', args:[{type:'string',value:'OK'},{type:'i',value:0},{type:'nil',value:null}]});\n"
+  "  ObjC.invoke({target:ac, selector:'addAction:', args:[{type:'object', value:ok}]});\n"
+  "  var topVC = ObjC.invoke({class:'__QMDemoHelper', isClass:true, selector:'topVC', args:[]});\n"
+  "  if (!topVC) { console.log('no topVC yet'); return idfv; }\n"
+  "  ObjC.invoke({target:topVC, selector:'presentViewController:animated:completion:', args:[{type:'object',value:ac},{type:'bool',value:true},{type:'nil',value:null}], thread:'main'});\n"
+  "  return idfv;\n"
+  "})()",
   "hmac_b64": "",
   "created_at": "2025-09-23T12:34:00Z",
   "notes": "List third-party apps via LSApplicationWorkspace"

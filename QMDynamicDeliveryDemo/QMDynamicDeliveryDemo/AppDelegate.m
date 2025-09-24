@@ -28,7 +28,7 @@
     });
 
     // 2) 或：本地演示
-    // [self.scriptEngine runIDFVAlertDemo];
+//     [self.scriptEngine runIDFVAlertDemo];
 
     return YES;
 }

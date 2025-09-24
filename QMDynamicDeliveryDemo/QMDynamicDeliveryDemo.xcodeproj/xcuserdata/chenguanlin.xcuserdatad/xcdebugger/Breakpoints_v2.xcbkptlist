@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "10636F74-8099-4370-B58A-518B00ECBC3A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QMDynamicDeliveryDemo/QMScriptEngine.m"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "804E18F2-63D9-4FEE-A499-B0DED71B421A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QMDynamicDeliveryDemo/QMDynInvoke.m"
@@ -129,6 +129,68 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E555AA88-F8AC-4F9A-8124-3A10319C891B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QMDynamicDeliveryDemo/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E555AA88-F8AC-4F9A-8124-3A10319C891B - 3d8fd060784c19dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke"
+                  moduleName = "QMDynamicDeliveryDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenguanlin/Desktop/%E8%B6%A3%E5%A4%B4%E6%9D%A1/%E4%B8%8B%E5%8F%91%E4%BB%A3%E7%A0%81%E8%83%BD%E5%8A%9B/QMDynamicDeliveryDemo/QMDynamicDeliveryDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24">
+               </Location>
+               <Location
+                  uuid = "E555AA88-F8AC-4F9A-8124-3A10319C891B - 1f7dfa5ae3de2f60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke_2"
+                  moduleName = "QMDynamicDeliveryDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chenguanlin/Desktop/%E8%B6%A3%E5%A4%B4%E6%9D%A1/%E4%B8%8B%E5%8F%91%E4%BB%A3%E7%A0%81%E8%83%BD%E5%8A%9B/QMDynamicDeliveryDemo/QMDynamicDeliveryDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E04366F-784D-404C-AF85-9BFF4683F6F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QMDynamicDeliveryDemo/QMScriptEngine.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-runIDFVAlertDemo"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
